@@ -7,6 +7,9 @@ path-traversal bugs) under two explicit profiles, **POSIX** and **Windows**.
 It never extracts, creates or follows anything on disk.
 
 **This is a validator and teaching tool, not a reproduction of any CVE.**
+**A `CONTAINED_LEXICALLY` result does not mean an archive is safe to
+extract.** Links, existing files and the extractor's own parsing are outside
+what a string check can see. See [LIMITATIONS.md](LIMITATIONS.md).
 
 ## Verdicts
 
@@ -34,10 +37,10 @@ Rules that are deliberate:
 ## Usage
 
 ```sh
-PYTHONPATH=src python -m archive_path_check check --profile both '../x' 'C:x' 'a/b'
-PYTHONPATH=src python -m archive_path_check check --jsonl fixtures/corpus.jsonl --profile windows
-PYTHONPATH=src python -m archive_path_check list some.zip      # reads names only
-PYTHONPATH=src python -m archive_path_check contain --dest /srv/out ../out-sibling/x
+PYTHONPATH=src python3 -m archive_path_check check --profile both '../x' 'C:x' 'a/b'
+PYTHONPATH=src python3 -m archive_path_check check --jsonl fixtures/corpus.jsonl --profile windows
+PYTHONPATH=src python3 -m archive_path_check list some.zip      # reads names only
+PYTHONPATH=src python3 -m archive_path_check contain --dest /srv/out ../out-sibling/x
 ```
 
 Exit codes: `0` all contained; `1` any `REJECT` (or, for `contain`, any
@@ -50,8 +53,8 @@ NUL byte, so NUL names inside zip files are not visible through `list`.
 ## Tests and results
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-python scripts/gen_results.py && (cd results && sha256sum -c SHA256SUMS)
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+python3 scripts/gen_results.py && (cd results && sha256sum -c SHA256SUMS)
 ```
 
 - `fixtures/corpus.jsonl`: 42 entries. `fixtures/expected.json`:

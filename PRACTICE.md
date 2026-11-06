@@ -22,9 +22,9 @@ de archivo (ver [SOURCES.md](SOURCES.md)).
 ## Comandos locales
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-PYTHONPATH=src python -m archive_path_check check --jsonl fixtures/corpus.jsonl --profile both
-PYTHONPATH=src python -m archive_path_check contain --dest /srv/out ../outx ../out/x
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+PYTHONPATH=src python3 -m archive_path_check check --jsonl fixtures/corpus.jsonl --profile both
+PYTHONPATH=src python3 -m archive_path_check contain --dest /srv/out ../outx ../out/x
 ```
 
 ## Ejercicios graduados

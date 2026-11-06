@@ -12,6 +12,13 @@
   outcome varies by API and file system.
 - **No decoding by design.** If an application percent-decodes or otherwise
   transforms names before using them, validate the transformed string.
+- **zipfile NUL truncation (visible limitation).** `list` reads zip names
+  through Python's `zipfile`, which truncates a name at the first NUL byte
+  (`_sanitize_filename`). A zip entry such as `ok.txt\x00../../x` is listed as
+  `ok.txt` and classified on that truncated string. The `NUL_BYTE` rule only
+  fires for names given directly (`check`) or exposed in full by the parser.
+- **Not an extraction safety guarantee.** Nothing in this repository should
+  be read as "safe to extract".
 - **Encoding.** Input is text. Raw bytes that are not valid in the archive's
   declared encoding are not handled; `list` uses the standard library's
   decoding and inherits its NUL truncation for zip names.

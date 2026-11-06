@@ -26,4 +26,6 @@
   joined path would come back inside.
 - **`contain` uses POSIX destinations** only.
 - **Corpus counts** describe this corpus, not real-world prevalence.
-- CI is defined but has only been run locally (Python 3.13.5 and 3.10).
+- CI is defined in `.github/workflows/ci.yml` and runs on GitHub Actions
+  (Python 3.10–3.13; live status: the Actions page linked from the README).
+  It was also run locally with Python 3.13.5 and 3.10.

@@ -1,6 +1,6 @@
 # cortex9-archive-path-escape-validator
 
-[Español](README.es.md) · [Practice guide](PRACTICE.md)
+[Español](README.es.md) · [Practice guide](PRACTICE.md) · [CI](https://github.com/federiconbaez/cortex9-archive-path-escape-validator/actions/workflows/ci.yml)
 
 Pure string validation of archive entry names (the "Zip Slip" class of
 path-traversal bugs) under two explicit profiles, **POSIX** and **Windows**.

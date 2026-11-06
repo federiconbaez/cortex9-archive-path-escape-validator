@@ -1,0 +1,11 @@
+[
+ {"dest": "/srv/out", "name": "x.txt", "within": true, "naive": true},
+ {"dest": "/srv/out", "name": "../out-sibling/x.txt", "within": false, "naive": true},
+ {"dest": "/srv/out", "name": "../outx", "within": false, "naive": true},
+ {"dest": "/srv/out", "name": "../out/x.txt", "within": true, "naive": true},
+ {"dest": "/srv/out", "name": "../../etc/x", "within": false, "naive": false},
+ {"dest": "/srv/out/", "name": "a/../../out2/x", "within": false, "naive": true},
+ {"dest": "/srv/out", "name": "/srv/out/x", "within": true, "naive": true},
+ {"dest": "/srv/out", "name": "/srv/outside", "within": false, "naive": true},
+ {"dest": "/srv/out", "name": ".", "within": true, "naive": true}
+]

@@ -1,0 +1,65 @@
+[
+ {
+  "dest": "/srv/out",
+  "name": "x.txt",
+  "within_components": true,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": false
+ },
+ {
+  "dest": "/srv/out",
+  "name": "../out-sibling/x.txt",
+  "within_components": false,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": true
+ },
+ {
+  "dest": "/srv/out",
+  "name": "../outx",
+  "within_components": false,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": true
+ },
+ {
+  "dest": "/srv/out",
+  "name": "../out/x.txt",
+  "within_components": true,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": false
+ },
+ {
+  "dest": "/srv/out",
+  "name": "../../etc/x",
+  "within_components": false,
+  "naive_prefix": false,
+  "sibling_prefix_confusion": false
+ },
+ {
+  "dest": "/srv/out/",
+  "name": "a/../../out2/x",
+  "within_components": false,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": true
+ },
+ {
+  "dest": "/srv/out",
+  "name": "/srv/out/x",
+  "within_components": true,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": false
+ },
+ {
+  "dest": "/srv/out",
+  "name": "/srv/outside",
+  "within_components": false,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": true
+ },
+ {
+  "dest": "/srv/out",
+  "name": ".",
+  "within_components": true,
+  "naive_prefix": true,
+  "sibling_prefix_confusion": false
+ }
+]

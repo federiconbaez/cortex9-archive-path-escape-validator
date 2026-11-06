@@ -1,0 +1,173 @@
+{
+ "_comment": "Hand-written VERDICT:REASON per profile; read only by tests.",
+ "expected": {
+  "c01": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c02": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c03": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c04": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c05": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c06": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c07": {
+   "posix": "REJECT:EMPTY",
+   "windows": "REJECT:EMPTY"
+  },
+  "c08": {
+   "posix": "REJECT:DOTDOT_ESCAPE",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c09": {
+   "posix": "REJECT:DOTDOT_ESCAPE",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c10": {
+   "posix": "REJECT:DOTDOT_ESCAPE",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c11": {
+   "posix": "REJECT:DOTDOT_ESCAPE",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c12": {
+   "posix": "REJECT:ABSOLUTE",
+   "windows": "REJECT:ROOT_RELATIVE"
+  },
+  "c13": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:ROOT_RELATIVE"
+  },
+  "c14": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c15": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c16": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DRIVE_ABSOLUTE"
+  },
+  "c17": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DRIVE_ABSOLUTE"
+  },
+  "c18": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DRIVE_RELATIVE"
+  },
+  "c19": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DRIVE_RELATIVE"
+  },
+  "c20": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:UNC"
+  },
+  "c21": {
+   "posix": "REJECT:ABSOLUTE",
+   "windows": "REJECT:UNC"
+  },
+  "c22": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DEVICE_OR_VERBATIM_PREFIX"
+  },
+  "c23": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "REJECT:DEVICE_OR_VERBATIM_PREFIX"
+  },
+  "c24": {
+   "posix": "REJECT:NUL_BYTE",
+   "windows": "REJECT:NUL_BYTE"
+  },
+  "c25": {
+   "posix": "REJECT:NUL_BYTE",
+   "windows": "REJECT:NUL_BYTE"
+  },
+  "c26": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c27": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c28": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_RESERVED_NAME"
+  },
+  "c29": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_RESERVED_NAME"
+  },
+  "c30": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_RESERVED_NAME"
+  },
+  "c31": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c32": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_TRAILING_DOT_OR_SPACE"
+  },
+  "c33": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_TRAILING_DOT_OR_SPACE"
+  },
+  "c34": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_TRAILING_DOT_OR_SPACE"
+  },
+  "c35": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_COLON_IN_COMPONENT"
+  },
+  "c36": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "UNKNOWN:WIN_CONTROL_CHAR"
+  },
+  "c37": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  },
+  "c38": {
+   "posix": "UNKNOWN:LINK_NOT_EVALUATED",
+   "windows": "UNKNOWN:LINK_NOT_EVALUATED"
+  },
+  "c39": {
+   "posix": "UNKNOWN:LINK_NOT_EVALUATED",
+   "windows": "UNKNOWN:LINK_NOT_EVALUATED"
+  },
+  "c40": {
+   "posix": "REJECT:DOTDOT_ESCAPE",
+   "windows": "REJECT:DOTDOT_ESCAPE"
+  },
+  "c41": {
+   "posix": "UNKNOWN:SPECIAL_ENTRY_TYPE",
+   "windows": "UNKNOWN:SPECIAL_ENTRY_TYPE"
+  },
+  "c42": {
+   "posix": "CONTAINED_LEXICALLY:OK",
+   "windows": "CONTAINED_LEXICALLY:OK"
+  }
+ }
+}

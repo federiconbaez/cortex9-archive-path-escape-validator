@@ -1,0 +1,842 @@
+[
+ {
+  "id": "c01",
+  "name_json": "\"docs/readme.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c01",
+  "name_json": "\"docs/readme.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c02",
+  "name_json": "\"docs/\"",
+  "type": "dir",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "EMPTY_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c02",
+  "name_json": "\"docs/\"",
+  "type": "dir",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "EMPTY_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c03",
+  "name_json": "\"./a/./b.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOT_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c03",
+  "name_json": "\"./a/./b.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOT_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c04",
+  "name_json": "\"a//b.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "EMPTY_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c04",
+  "name_json": "\"a//b.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "EMPTY_COMPONENT",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c05",
+  "name_json": "\"a/../b.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOTDOT_INSIDE",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c05",
+  "name_json": "\"a/../b.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOTDOT_INSIDE",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c06",
+  "name_json": "\".\"",
+  "type": "dir",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOT_COMPONENT;RESOLVES_TO_DESTINATION",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c06",
+  "name_json": "\".\"",
+  "type": "dir",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOT_COMPONENT;RESOLVES_TO_DESTINATION",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c07",
+  "name_json": "\"\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "EMPTY",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c07",
+  "name_json": "\"\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "EMPTY",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c08",
+  "name_json": "\"../escape.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c08",
+  "name_json": "\"../escape.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c09",
+  "name_json": "\"a/../../escape.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "DOTDOT_INSIDE",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c09",
+  "name_json": "\"a/../../escape.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "DOTDOT_INSIDE",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c10",
+  "name_json": "\"..\"",
+  "type": "dir",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c10",
+  "name_json": "\"..\"",
+  "type": "dir",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c11",
+  "name_json": "\"../out-sibling/x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c11",
+  "name_json": "\"../out-sibling/x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c12",
+  "name_json": "\"/etc/example.conf\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "ABSOLUTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c12",
+  "name_json": "\"/etc/example.conf\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "ROOT_RELATIVE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c13",
+  "name_json": "\"\\\\dir\\\\file.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c13",
+  "name_json": "\"\\\\dir\\\\file.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "ROOT_RELATIVE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c14",
+  "name_json": "\"..\\\\..\\\\escape.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c14",
+  "name_json": "\"..\\\\..\\\\escape.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c15",
+  "name_json": "\"a\\\\..\\\\b.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c15",
+  "name_json": "\"a\\\\..\\\\b.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "DOTDOT_INSIDE",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c16",
+  "name_json": "\"C:\\\\Windows\\\\x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c16",
+  "name_json": "\"C:\\\\Windows\\\\x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DRIVE_ABSOLUTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c17",
+  "name_json": "\"C:/x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c17",
+  "name_json": "\"C:/x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DRIVE_ABSOLUTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c18",
+  "name_json": "\"C:x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c18",
+  "name_json": "\"C:x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DRIVE_RELATIVE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c19",
+  "name_json": "\"d:sub\\\\x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c19",
+  "name_json": "\"d:sub\\\\x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DRIVE_RELATIVE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c20",
+  "name_json": "\"\\\\\\\\server\\\\share\\\\x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c20",
+  "name_json": "\"\\\\\\\\server\\\\share\\\\x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "UNC",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c21",
+  "name_json": "\"//server/share/x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "ABSOLUTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c21",
+  "name_json": "\"//server/share/x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "UNC",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c22",
+  "name_json": "\"\\\\\\\\?\\\\C:\\\\x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c22",
+  "name_json": "\"\\\\\\\\?\\\\C:\\\\x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DEVICE_OR_VERBATIM_PREFIX",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c23",
+  "name_json": "\"\\\\\\\\.\\\\COM1\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "BACKSLASH_LITERAL",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c23",
+  "name_json": "\"\\\\\\\\.\\\\COM1\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DEVICE_OR_VERBATIM_PREFIX",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c24",
+  "name_json": "\"a\\u0000.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "NUL_BYTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c24",
+  "name_json": "\"a\\u0000.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "NUL_BYTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c25",
+  "name_json": "\"ok.txt\\u0000../../x\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "NUL_BYTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c25",
+  "name_json": "\"ok.txt\\u0000../../x\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "NUL_BYTE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c26",
+  "name_json": "\"%2e%2e/x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "PERCENT_LITERAL",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c26",
+  "name_json": "\"%2e%2e/x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "PERCENT_LITERAL",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c27",
+  "name_json": "\"..%2fx.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "PERCENT_LITERAL",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c27",
+  "name_json": "\"..%2fx.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "PERCENT_LITERAL",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c28",
+  "name_json": "\"CON\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c28",
+  "name_json": "\"CON\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_RESERVED_NAME",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c29",
+  "name_json": "\"logs/nul.tar.gz\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c29",
+  "name_json": "\"logs/nul.tar.gz\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_RESERVED_NAME",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c30",
+  "name_json": "\"COM\\u00b9\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c30",
+  "name_json": "\"COM\\u00b9\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_RESERVED_NAME",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c31",
+  "name_json": "\"console.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c31",
+  "name_json": "\"console.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c32",
+  "name_json": "\"a/b.\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c32",
+  "name_json": "\"a/b.\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_TRAILING_DOT_OR_SPACE",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c33",
+  "name_json": "\"... /x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c33",
+  "name_json": "\"... /x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_TRAILING_DOT_OR_SPACE",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c34",
+  "name_json": "\".. /x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c34",
+  "name_json": "\".. /x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_TRAILING_DOT_OR_SPACE",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c35",
+  "name_json": "\"file.txt:stream\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c35",
+  "name_json": "\"file.txt:stream\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_COLON_IN_COMPONENT",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c36",
+  "name_json": "\"a/\\u0001b.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c36",
+  "name_json": "\"a/\\u0001b.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "WIN_CONTROL_CHAR",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c37",
+  "name_json": "\".temp\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c37",
+  "name_json": "\".temp\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c38",
+  "name_json": "\"link-to-inside\"",
+  "type": "symlink",
+  "profile": "posix",
+  "verdict": "UNKNOWN",
+  "reason": "LINK_NOT_EVALUATED",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c38",
+  "name_json": "\"link-to-inside\"",
+  "type": "symlink",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "LINK_NOT_EVALUATED",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c39",
+  "name_json": "\"hard\"",
+  "type": "hardlink",
+  "profile": "posix",
+  "verdict": "UNKNOWN",
+  "reason": "LINK_NOT_EVALUATED",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c39",
+  "name_json": "\"hard\"",
+  "type": "hardlink",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "LINK_NOT_EVALUATED",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c40",
+  "name_json": "\"../link\"",
+  "type": "symlink",
+  "profile": "posix",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c40",
+  "name_json": "\"../link\"",
+  "type": "symlink",
+  "profile": "windows",
+  "verdict": "REJECT",
+  "reason": "DOTDOT_ESCAPE",
+  "flags": "",
+  "combined": "REJECT"
+ },
+ {
+  "id": "c41",
+  "name_json": "\"dev/fifo\"",
+  "type": "special",
+  "profile": "posix",
+  "verdict": "UNKNOWN",
+  "reason": "SPECIAL_ENTRY_TYPE",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c41",
+  "name_json": "\"dev/fifo\"",
+  "type": "special",
+  "profile": "windows",
+  "verdict": "UNKNOWN",
+  "reason": "SPECIAL_ENTRY_TYPE",
+  "flags": "",
+  "combined": "UNKNOWN"
+ },
+ {
+  "id": "c42",
+  "name_json": "\"\\uff0e\\uff0e/x.txt\"",
+  "type": "file",
+  "profile": "posix",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ },
+ {
+  "id": "c42",
+  "name_json": "\"\\uff0e\\uff0e/x.txt\"",
+  "type": "file",
+  "profile": "windows",
+  "verdict": "CONTAINED_LEXICALLY",
+  "reason": "OK",
+  "flags": "",
+  "combined": "CONTAINED_LEXICALLY"
+ }
+]

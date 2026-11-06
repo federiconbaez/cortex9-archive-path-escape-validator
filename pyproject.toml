@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex9-archive-path-escape-validator"
+version = "0.1.0"
+description = "Pure string validation of archive entry names under POSIX and Windows profiles"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+archive-path-check = "archive_path_check.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
